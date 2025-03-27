@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Clone Source Code') {
             steps {
-                git 'https://github.com/tsui24/Demo.git'
+                git branch: 'main', url: 'https://github.com/tsui24/Demo.git'
             }
         }
         stage('Build Project') {
