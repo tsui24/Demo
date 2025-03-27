@@ -2,10 +2,7 @@ pipeline {
     agent any
     environment {
         JAVA_HOME = "/opt/java/jdk-21"
-        PATH = "$JAVA_HOME/bin:$PATH"
-    }
-    tools {
-        maven 'Maven_3.9.9'
+        PATH = "$JAVA_HOME/bin:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.9.9/bin:$PATH"
     }
     stages {
         stage('Clone Source Code') {
